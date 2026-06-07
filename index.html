@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Legends</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-image"></div>
+
+    <header>
+        <div class="logo">
+            <img src="LOGO.png" alt="Movies Hub Logo">
+        </div>
+        <nav>
+            <ul> 
+                <li><a href="#Home">Home</a></li> 
+                <li><a href="#Movies">Top 15</a></li>
+                <li><a href="#Recommended">Recommended</a></li>
+                <li><a href="#Anticipated2026">2026 Blockbusters</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="Home">
+        <section class="info-section">
+            <h1>MOVIE INFO</h1>
+            <p>Exploring the greatest masterpieces in cinematic history. Use the sliders below to explore the all-time greats and my personal favorites. Click any card to view detailed movie information!</p>
+        </section>
+
+        <h2 class="section-title">TOP 15 OF ALL TIME</h2>
+        <section id="Movies" class="slider-wrapper">
+            <button class="nav-btn prev" onclick="moveSlider('movieSlider', -1)">&#10094;</button>
+            <div class="movie-container" id="movieSlider">
+                <div class="movie-card" onclick="openModal(this)" data-title="The Godfather">
+                    <img src="https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg">
+                    <h3>The Godfather</h3>
+                    <div class="card-rating" data-movie="The Godfather"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Schindler's List">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg">
+                    <h3>Schindler's List</h3>
+                    <div class="card-rating" data-movie="Schindler's List"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Pulp Fiction">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWUesO27dX-_jfhwP2RE4hcNb8ZQkRYaBaYg&s">
+                    <h3>Pulp Fiction</h3>
+                    <div class="card-rating" data-movie="Pulp Fiction"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="The Dark Knight">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg">
+                    <h3>The Dark Knight</h3>
+                    <div class="card-rating" data-movie="The Dark Knight"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="The Lord of the Rings: The Return of the King">
+                    <img src="https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg">
+                    <h3>The Lord of the Rings</h3>
+                    <div class="card-rating" data-movie="The Lord of the Rings: The Return of the King"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Inception">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg">
+                    <h3>Inception</h3>
+                    <div class="card-rating" data-movie="Inception"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Seven Samurai">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDSXaIq0gQOMYRZWgGd15weOflRG6P1NjUTw&s">
+                    <h3>Seven Samurai</h3>
+                    <div class="card-rating" data-movie="Seven Samurai"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Fight Club">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxZR_S02qFSRfD6t_O-_VOiGL4aC47fu6RDw&s">
+                    <h3>Fight Club</h3>
+                    <div class="card-rating" data-movie="Fight Club"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="The Green Mile">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_.jpg">
+                    <h3>The Green Mile</h3>
+                    <div class="card-rating" data-movie="The Green Mile"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Goodfellas">
+                    <img src="https://m.media-amazon.com/images/M/MV5BN2E5NzI2ZGMtY2VjNi00YTRjLWI1MDUtZGY5OWU1MWJjZjRjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+                    <h3>Goodfellas</h3>
+                    <div class="card-rating" data-movie="Goodfellas"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Parasite">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl1Al1ntAmYf0mvoO6lINXekizJ0Zp9B1Ebg&s">
+                    <h3>Parasite</h3>
+                    <div class="card-rating" data-movie="Parasite"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Dead Poets Society">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1BB1xuDz-Ddp24PXsUGQR_wbfnslcUiY0KA&s">
+                    <h3>Dead Poets Society</h3>
+                    <div class="card-rating" data-movie="Dead Poets Society"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="12 Angry Men">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/12_Angry_Men_%281957_film_poster%29.jpg">
+                    <h3>12 Angry Men</h3>
+                    <div class="card-rating" data-movie="12 Angry Men"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Interstellar">
+                    <img src="https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+                    <h3>Interstellar</h3>
+                    <div class="card-rating" data-movie="Interstellar"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="The Shawshank Redemption">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg">
+                    <h3>The Shawshank Redemption</h3>
+                    <div class="card-rating" data-movie="The Shawshank Redemption"></div>
+                </div>
+            </div>
+            <button class="nav-btn next" onclick="moveSlider('movieSlider', 1)">&#10095;</button>
+        </section>
+
+        <h2 class="section-title" id="Recommended">RECOMMENDED BY ME</h2>
+        <section class="slider-wrapper">
+            <button class="nav-btn prev" onclick="moveSlider('recSlider', -1)">&#10094;</button>
+            <div class="movie-container" id="recSlider">
+                <div class="movie-card" onclick="openModal(this)" data-title="Fight Club">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxZR_S02qFSRfD6t_O-_VOiGL4aC47fu6RDw&s">
+                    <h3>Fight Club</h3>
+                    <div class="card-rating" data-movie="Fight Club"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Good Will Hunting">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDdjZGQ5YzEtNTc2My00Mjc0LWFlMTctYzkwMzZlNzdiZWYzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+                    <h3>Good Will Hunting</h3>
+                    <div class="card-rating" data-movie="Good Will Hunting"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="No Country for Old Men">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjA5Njk3MjM4OV5BMl5BanBnXkFtZTcwMTc5MTE1MQ@@._V1_FMjpg_UX1000_.jpg">
+                    <h3>No Country for Old Men</h3>
+                    <div class="card-rating" data-movie="No Country for Old Men"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Once Upon a Time in Hollywood">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Once_Upon_a_Time_in_Hollywood_poster.png/250px-Once_Upon_a_Time_in_Hollywood_poster.png">
+                    <h3>Once Upon a Time in Hollywood</h3>
+                    <div class="card-rating" data-movie="Once Upon a Time in Hollywood"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Django Unchained">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/8/8b/Django_Unchained_Poster.jpg">
+                    <h3>Django Unchained</h3>
+                    <div class="card-rating" data-movie="Django Unchained"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="The Godfather">
+                    <img src="https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg">
+                    <h3>The Godfather</h3>
+                    <div class="card-rating" data-movie="The Godfather"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Prisoners">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTg0NTIzMjQ1NV5BMl5BanBnXkFtZTcwNDc3MzM5OQ@@._V1_FMjpg_UX1000_.jpg">
+                    <h3>Prisoners</h3>
+                    <div class="card-rating" data-movie="Prisoners"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Inception">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg">
+                    <h3>Inception</h3>
+                    <div class="card-rating" data-movie="Inception"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="The Prestige">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTM3MzQ5MjQ5OF5BMl5BanBnXkFtZTcwMTQ3NzMzMw@@._V1_.jpg">
+                    <h3>The Prestige</h3>
+                    <div class="card-rating" data-movie="The Prestige"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="The Wolf of Wall Street">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/The_Wolf_of_Wall_Street_%282013%29.png/250px-The_Wolf_of_Wall_Street_%282013%29.png">
+                    <h3>The Wolf of Wall Street</h3>
+                    <div class="card-rating" data-movie="The Wolf of Wall Street"></div>
+                </div>
+            </div>
+            <button class="nav-btn next" onclick="moveSlider('recSlider', 1)">&#10095;</button>
+        </section>
+
+        <h2 class="section-title" id="Anticipated2026">ANTICIPATED IN 2026</h2>
+        <section class="slider-wrapper">
+            <button class="nav-btn prev" onclick="moveSlider('futureSlider', -1)">&#10094;</button>
+            <div class="movie-container" id="futureSlider">
+                <div class="movie-card" onclick="openModal(this)" data-title="The Backrooms">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT78qjkrp0U6XxO7ouPgRg2ckuSPmBreSnaKQ&s">
+                    <h3>The Backrooms</h3>
+                    <div class="card-rating" data-movie="The Backrooms"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="The Odyssey">
+                    <img src="https://m.media-amazon.com/images/M/MV5BN2MyYjk2MWMtODMyZS00MDUyLWE0OGQtOTQ3MGY0MDE0ZjVmXkEyXkFqcGc@._V1_.jpg">
+                    <h3>The Odyssey</h3>
+                    <div class="card-rating" data-movie="The Odyssey"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Project Hail Mary">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqrYwap1XaZplAXl08fLFjvOovWW_E4xMxNg&s">
+                    <h3>Project Hail Mary</h3>
+                    <div class="card-rating" data-movie="Project Hail Mary"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Avengers: Doomsday">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ebUkpXxsy9rNRmt8egy_MA3l0-G_iMMSfw&s">
+                    <h3>Avengers: Doomsday</h3>
+                    <div class="card-rating" data-movie="Avengers: Doomsday"></div>
+                </div>
+                <div class="movie-card" onclick="openModal(this)" data-title="Spider-Man: Brand New Day">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaTV3QiqV0Iv9VfIkW_L7w1vqa4h8y7bJcvA&s">
+                    <h3>Spider-Man: Brand New Day</h3>
+                    <div class="card-rating" data-movie="Spider-Man: Brand New Day"></div>
+                </div>
+            </div>
+            <button class="nav-btn next" onclick="moveSlider('futureSlider', 1)">&#10095;</button>
+        </section>
+    </main>
+
+    <footer id="Contact">
+        <h3>Contact Us</h3>
+        <p>Email: Rami@MoviesHub.com | Phone: +1 555-FILM</p>
+    </footer>
+
+    <script>
+        function moveSlider(sliderId, direction) {
+            const slider = document.getElementById(sliderId);
+            const scrollAmount = 300;
+            slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+
+        function openModal(card) {
+            const movieTitle = card.getAttribute('data-title');
+            if (!movieTitle) return;
+            window.location.href = `aboutmovies.html?movie=${encodeURIComponent(movieTitle)}`;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            refreshAllCardRatings();
+        });
+
+        function refreshAllCardRatings() {
+            let allReviews = JSON.parse(localStorage.getItem('movie_reviews')) || {};
+            const scoreDisplays = document.querySelectorAll(".card-rating");
+
+            scoreDisplays.forEach(display => {
+                const targetTitle = display.getAttribute("data-movie");
+                const matchingReviews = allReviews[targetTitle] || [];
+
+                if (matchingReviews.length === 0) {
+                    display.innerHTML = `<span class="no-rating">Not Rated</span>`;
+                } else {
+                    let total = 0;
+                    matchingReviews.forEach(r => total += r.rating);
+                    let average = (total / matchingReviews.length).toFixed(1);
+                    if (average.endsWith('.0')) average = parseInt(average);
+
+                    display.innerHTML = `
+                        <span class="gold-star">&#9733;</span>
+                        <span class="rating-val">${average}/5</span>
+                        <span class="count-val">(${matchingReviews.length})</span>
+                    `;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
